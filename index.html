@@ -10,7 +10,11 @@
     
     <div class="maintop">
       <h1>United States National Parks</h1>
+      <div class="tree">
+      <img src="./tree.jpg" alt="Tree" style="width:100px;height:100px;">
+      </div>
     </div>
+    <br>
 
     <div class="topnav">
         <a class="active" href="#home">Home</a>
@@ -36,11 +40,19 @@
 
         }
 
+        .tree {
+            position: absolute;
+            right: 0px ;
+            top: 0px;
+        }
+
        .maintop {
             background-color: blanchedalmond;
             text-align: center;
             background-size: auto;
             border-style: solid;
+            padding: 10px;
+            position: relative;
 
         }
 
@@ -62,6 +74,8 @@
         .topnav {
         background-color: blanchedalmond;
         overflow: hidden;
+        border-style: solid;
+        border-color: aliceblue;
         }
 
         /* Style the links inside the navigation bar */
@@ -84,6 +98,8 @@
         .topnav a.active {
         background-color: rgb(173, 216, 230);
         color: white;
+        border-style: solid;
+        border-color: black;
         }
 
 
