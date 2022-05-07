@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv=`"X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>US National Parks</title>
 </head>
@@ -19,16 +19,16 @@
         <br>
 
         <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="#picture">Pictures</a>
-            <a href="#park">Yellow Stone</a>
-            <a href="#park">Yosemite</a>
-            <a href="#park">Tetons</a>
+            <a class="active" href="index.html">Home</a>
+            <a href="./Pictures">Pictures</a>
+            <a href="./YellowStone/">Yellowstone</a>
+            <a href="./Yosemeti/">Yosemite</a>
+            <a href="./Tetons/">Tetons</a>
         </div>
 
         <div class="rate">
             <h2>My Top 3 Favorites</h2>
-            <a href="https://www.nationalparks.org/connect/explore-parks/yellowstone-national-park" target="_blank">1. YellowStone</a>
+            <a href="https://www.nationalparks.org/connect/explore-parks/yellowstone-national-park" target="_blank">1. Yellowstone</a>
             <br>
             <a href="https://www.nps.gov/yose/index.htm" target="_blank">2. Yosemite</a>
             <br>
@@ -36,8 +36,62 @@
 
         </div>
     </div>
+    <div class="backround">
+        <p> </p>
+    </div>
 
+    <div class="list">
+    <ul id="todos"></ul>
+
+    <form> 
+        <div class="plan">
+            <h4>Plan Your Visit!</h4>
+        </div>
+        <input class="textbox" name="todo" type="text">
+        <input class="textadd" type="submit" value="Add Park">
+    </form>
+
+
+    <script>
+
+        // Get DOM elements
+        const form  = document.querySelector('form');
+        const input = document.querySelector("[name='todo']");
+        const todoList = document.getElementById('todos');
+
+         // Side Effects / Lifecycle
+    
+        const existingTodos = JSON.parse(localStorage.getItem('todos')) || [];
+
+        const todoData = [];
+        
+        existingTodos.forEach(todo => {
+            addTodo(todo);
+        });
+
+
+        function addTodo(todoText) {
+            todoData.push(todoText);
+            const li = document.createElement('li')
+            li.innerHTML = todoText;
+            todoList.appendChild(li);
+            localStorage.setItem('todos', JSON.stringify(todoData));
+            input.value = ''
+        }
+
+        // Events
+        form.onsubmit = (event) => {
+            event.preventDefault();
+            addTodo(input.value);
+        }
+
+
+    </script>
+    </div>
+
+    
     <style>
+
       body {
              background-color: rgba(173, 216, 230, 0.399);
 
@@ -123,10 +177,55 @@
             width: 120px;
             height: 180px;
             border-style: solid;
+            background-color: rgb(173, 216, 230) ;
+
+        }
+        
+        .list {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: 200px;
+            margin-left: -125px;
+            width: 265px;
+            height: 200px;
+            border-style: solid; 
+            background-color: rgb(173, 216, 230);
+            border-radius: 20px;
         }
 
-            
+        .textbox {
+            padding: 5px;
+            margin: 2px;
+            border-radius: 10px;
+            border-width: 2px;
+            border-color: red;
+
+
+        }
+
+        .textadd {
+            padding: 5px;
+            margin: 2px;
+            border-radius: 10px;
+            border-width: 2px;
+            border-color: red;
+        }
         
+        .plan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -120px;
+            margin-left: -55px;
+        }
+        body {
+            background-image: url('./backround.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
 
 
 
