@@ -63,23 +63,18 @@ padding: 14px;
 
 }
 .desc {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    margin-top: 250px;
-    margin-left: 300px;
-
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border: solid;
+    background-color:rgb(173, 216, 230);
+    border-radius: 20px;
+    margin-top: 200px;
+    
  
 }
-.cred {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: 60px;
-    margin-left: -230px;
-    color:rgb(255, 0, 0);
+
    
-}
+
 body {
     background-image: url('./mainimg.jpg');
     background-repeat: no-repeat;
