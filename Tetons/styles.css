@@ -62,3 +62,18 @@ padding: 14px;
     position: relative;
 
 }
+
+body {
+    background-image: url('./backround.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.img {
+    display: grid;
+    place-items: center;
+    margin-top: 20%;
+
+}

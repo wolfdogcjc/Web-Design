@@ -82,3 +82,7 @@ body {
     background-size: cover;
 
 }
+.gif {
+    display: grid;
+    place-items: center;
+}
