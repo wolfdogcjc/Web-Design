@@ -56,12 +56,12 @@
 
     <script>
 
-        // Get DOM elements
+        
         const form  = document.querySelector('form');
         const input = document.querySelector("[name='todo']");
         const todoList = document.getElementById('todos');
 
-         // Side Effects / Lifecycle
+         
     
         const existingTodos = JSON.parse(localStorage.getItem('todos')) || [];
 
@@ -81,7 +81,7 @@
             input.value = ''
         }
 
-        // Events
+        
         form.onsubmit = (event) => {
             event.preventDefault();
             addTodo(input.value);
