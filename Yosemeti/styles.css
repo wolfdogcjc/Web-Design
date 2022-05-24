@@ -80,3 +80,13 @@ body {
     margin-top: 20%;
 
 }
+.desc {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border: solid;
+    background-color:rgb(173, 216, 230);
+    border-radius: 20px;
+    margin-top: 200px;
+    
+ 
+}
