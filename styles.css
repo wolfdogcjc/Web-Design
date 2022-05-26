@@ -161,4 +161,10 @@ body {
 
 
 
+.video {
+    display: grid;
+    place-items: center;
+    margin-top: 200px;
+    margin-left: -140px;
+}
 
